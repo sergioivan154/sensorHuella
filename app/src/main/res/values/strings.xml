@@ -1,0 +1,273 @@
+<resources>
+    <string name="app_name">SagarpApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="application_name">FingerprintDialog</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="use_password">Use password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="ok">OK</string>
+    <string name="password">Password</string>
+    <string name="fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="fingerprint_hint">Touch sensor</string>
+    <string name="password_description">Enter your store password to continue</string>
+    <string name="purchase">Purchase</string>
+    <string name="purchase_not_invalidated">Purchase not invalidated</string>
+    <string name="purchase_button_not_invalidated_description">
+        You can proceed to purchase with this button \n even if a new fingerprint is enrolled
+    </string>
+    <string name="fingerprint_not_recognized">Fingerprint not recognized. Try again</string>
+    <string name="fingerprint_success">Fingerprint recognized</string>
+    <string name="item_title">White Mesh Pluto Backpack</string>
+    <string name="item_price">$62.68</string>
+    <string name="item_description">Mesh backpack in white. Black textile trim throughout.</string>
+    <string name="purchase_done">Purchase successful</string>
+    <string name="new_fingerprint_enrolled_description">A new fingerprint was added to this device, so your password is required.</string>
+    <string name="use_fingerprint_in_future">Use fingerprint in the future</string>
+    <string name="use_fingerprint_to_authenticate_title">Use fingerprint to authenticate</string>
+    <string name="use_fingerprint_to_authenticate_key" >use_fingerprint_to_authenticate_key</string>
+    <string name="description_bugdroid_icon">Android bugdroid image</string>
+    <string name="description_fingerprint_icon">Fingerprint icon</string>
+
+    <string name="title_activity_login">Sign in</string>
+    <string name="txt_version_app">v1.0.10</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="txt_cargando">Cargando</string>
+    <string name="txt_espere">Espere un momento...</string>
+    <string name="txt_btn_aceptar">Aceptar</string>
+    <string name="txt_btn_cancelar">Cancelar</string>
+    <string name="txt_set_text_cova">Cova_</string>
+    <string name="txt_serial_number">Número de serial</string>
+    <string name="txt_repit_serial_number">Repita número serial</string>
+    <string name="txt_finalizar">Finalizar</string>
+    <string name="txt_error_conexion_mensaje">Error de conexión</string>
+    <string name="txt_error_conexion_internet">Comprueba tu conexión a internet</string>
+    <string name="txt_sin_mediciones">No tienes mediciones a mostrar en la gráfica.</string>
+    <string name="txt_permisos_denegados_title">Permisos denegados</string>
+    <string name="txt_permisos_mensaje">Los permisos no fueron aceptados, se necesitan permisos para continuar.</string>
+    <string name="txt_algo_salio_mal">Algo salio mal</string>
+    <string name="txt_permission_bluetooth_title">Permiso denegado</string>
+    <string name="txt_permission_bluetooth_message">Permiso denegado se necesita para poder sincronizar los dispositivos</string>
+    <string name="txt_permission_question">¿Desea Activar los permisos?</string>
+    <string name="txt_permission_gps_title">Permiso GPS</string>
+    <string name="txt_permission_gps_message">Habilite el GPS para poder sincroniar los dispositivos</string>
+
+    <string name="txt_title_hora_invalida">Hora de término invalida</string>
+    <string name="txt_title_day_invalidate">Día invalida</string>
+    <string name="txt_message_hora_invalida">Tienes que seleccionar una hora de término que sea posterior</string>
+    <string name="txt_message_hora_invalida_inicio">Tienes que seleccionar una hora de inicio que sea posterior</string>
+    <string name="txt_message_select_day">Tienes que seleccionar un día que sea posterior</string>
+
+    <string name="txt_title_call_programmatically">Llamada programada</string>
+    <string name="txt_message_call_programmatically">Se ha programado una llamada en la fecha seleccionada</string>
+
+    <string name="txt_title_tablet_report">Tableta reportada</string>
+    <string name="txt_message_tablet_report">Se ha reportado que tu tableta tiene problemas de hardware</string>
+
+    <string name="txt_title_operacion_exitosa">Operación realizada con éxito</string>
+    <string name="txt_message_delete_device">Dispositivo desvinculado con éxito</string>
+    <string name="txt_peso">Peso registrado correctamente</string>
+    <string name="txt_accomplish">Tarea cumplida</string>
+
+    <string name="txt_search_devices">Buscando dispositivo</string>
+    <string name="txt_details_finish_activity">Intente de nuevo, actividad terminada</string>
+
+
+    <string name="txt_not_plan_inscrit">Actualmente no esta inscrito a ningún plan.</string>
+
+
+    <!-- Texto Login Activity  -->
+    <string name="texto_ayuda_login">Inicia sesión o \nescanéa el código QR</string>
+    <string name="texto_email_login">e-mail</string>
+    <string name="texto_password_login">contraseña</string>
+    <string name="botton_session_login">Iniciar sesion</string>
+    <string name="botton_olvide_login"><u>Olvidé mi contraseña</u></string>
+    <string name="botton_escanear_login">Escanear código</string>
+
+
+    <!-- Texto Recuperar Contraseña-->
+    <string name="texto_titulo_recuperar">Recupera tu contraseña</string>
+    <string name="texto_ayuda_recuperar">Escribe el e-mail con el que te registraste</string>
+    <string name="botton_enviar_recuperar">Enviar</string>
+    <string name="texto_error_recuperar">Esta cuenta de e-mail no está registrada</string>
+    <string name="texto_titulo_exitoso_recuperar">Correo enviado</string>
+    <string name="texto_ayuda_exitoso_recuperar">Hemos enviado un correo a tu cuenta de e-mail con\n
+                                                 tu contraseña y código de acceso, revisa tu bandeja\n
+                                                 de entrada.</string>
+    <string name="botton_exitoso_recuperar">Entendido</string>
+
+    <!-- Texto Menu Principal-->
+    <string name="texto_inicio_menu">Inicio</string>
+    <string name="texto_dispositivos_menu">Mis dispositivos</string>
+    <string name="texto_plan_menu">Mi plan</string>
+    <string name="texto_calendario_menu">Calendario</string>
+    <string name="texto_comunicacion_menu">Comunicación</string>
+    <string name="texto_ayuda_menu">Ayuda</string>
+
+    <!-- Texto Menu Secundario -->
+    <string name="texto_actividades_secundario">MIS ACTIVIDADES</string>
+    <string name="texto_avance_secundario">AVANCE</string>
+    <string name="texto_video_secundario">VIDEOS</string>
+    <string name="texto_favorito_secundario">FAVORIOS</string>
+
+
+    <!-- Texto inicio fragment -->
+    <string name="texto_pregunta_inferior">¿Cuál ha sido tu progreso?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Texto boton tiwmpo -->
+
+    <string name="boton_dia">Día</string>
+    <string name="boton_mes">Mes</string>
+    <string name="boton_año">Año</string>
+
+
+    <!-- Textó help Fragment -->
+    <string name="texto_ayuda_medica">¿Requieres ayuda médica?</string>
+    <string name="texto_telefono_medica">Comunicate al 55 47 77 89 32</string>
+    <string name="texto_soporte_medica">¿O necesitas soporte técnico?</string>
+    <string name="texto_telefono_tecnico">Comunicate al 55 47 77 89 32</string>
+
+    <!-- Texto Calendario fragment-->
+    <string name="texto_hoy_calendario">HOY</string>
+    <string name="texto_actividad_calendario">Actividades:</string>
+    <string name="texto_no_actividad_calendario">No tienes actividades</string>
+
+    <!-- Texto Avance -->
+    <string name="avance_inicio">Biomarcador</string>
+    <string name="avance_inivial">Inicial</string>
+    <string name="avance_ultima">Última toma</string>
+    <string name="avance_meta">Meta</string>
+    <string name="avance_Mejoria">Mejoría de biomarcador</string>
+    <string name="avance_titulo">Progreso de biomarcadores</string>
+    <string name="avance_boton_vista">Cambiar vista</string>
+    <string name="avance_estas">Estas ha</string>
+    <string name="avance_meta_dialog">de tu meta</string>
+
+    <!-- Texto enlazar componente-->
+    <string name="unlinkdevice">Desenlazar\ndispositivo</string>
+    <string name="relinkdevice">Reesenlazar\ndispositivo</string>
+
+    <!-- Texto activity enlazar dispositivo-->
+    <string name="titulo_dispositivo">Enlace de dispositivo</string>
+    <string name="info_enlace">Presiona el botón <b>Enlazar</b> para vincular tu dispositivo.\n
+    Espera hasta que se hayan sincronizado correctamente</string>
+    <string name="name_bascula">Báscula</string>
+    <string name="btn_enlazar">Enlazar</string>
+    <string name="btn_enlazar_exitoso">Enlazado</string>
+
+    <!-- Texto activity datos -->
+    <string name="titulo_confirmacion">Confirmacíon de datos</string>
+    <string name="registro_nombre">Nombre (s)*</string>
+    <string name="registro_apellido_p">Primer apellido*</string>
+    <string name="registro_apellido_m">Segundo apellido</string>
+    <string name="registro_sexo">Sexo*</string>
+    <string name="registro_nacimiento">Fecha de nacimiento*</string>
+    <string name="registro_pais">País de nacimiento</string>
+    <string name="registro_email">Email*</string>
+    <string name="registro_boton_sig">Siguiente</string>
+
+    <!-- Texto activity Prueba tacnica -->
+    <string name="titulo_prueba">Prueba técnica de tableta</string>
+    <string name="prueba_visual">¿Puedes verte a ti mismo?</string>
+    <string name="prueba_audio">¿Puedes escuchar esto?</string>
+    <string name="prueba_voz">¿Puedes escuchar tu voz?</string>
+    <string name="pueba_btn">Todo en orden</string>
+    <string name="prueba_novisual">No puedo ver mi video</string>
+    <string name="prueba_noaudio">No puedo escucharlo</string>
+    <string name="prueba_novoz">No puedo escucharla</string>
+
+    <!-- Texto detalle de llamada-->
+    <string name="titulo_llamada">Detalle de tu llamada</string>
+    <string name="asunto_llamada">Asunto de la llamada</string>
+    <string name="texto_llamada">¿En que rango de tiempo puede el Healthcoach atenderte?</string>
+    <string name="boton_caneclar_llamada">Cancelar</string>
+
+    <string name="boton_aceptar">Programar</string>
+
+    <string name="boton_aceptar_llamada">Programar</string>
+
+
+    <string name="peticion_llamada">¡Tu petición ha sido enviada!</string>
+    <string name="texto_peticion_llamada">Tu Healthcoach recibirá tu petición para realizar una llamada \nEn un lapzo
+    máximo de 2 días hábliles recibirás una notificación \nen caso de que este acepte o la decline.</string>
+    <string name="boton_entiendo">Entiendo</string>
+
+
+    <string name="cumplimiento">Cumplimiento</string>
+    <string name="avanceProto">Avance \ndel protocolo</string>
+
+
+    <!-- Mensaje de error-->
+    <string name="mensaje_titulo">¡Atención!</string>
+    <string name="mensaje_error_ethernet">No cuentas con conexion a internet</string>
+
+    <!-- Agregar Actividades -->
+    <string name="mensaje_title_add">¿Qué tipo de actividad quieres agregar?</string>
+    <string name="boton_add_cancel">Cancelar</string>
+    <string name="boton_add_accept">Siguiente</string>
+
+    <string name="boton_llamada">Programar llamada</string>
+    <string name="title_activity_example">ActivityExample</string>
+
+
+    <!-- Permisos de videollamada -->
+    <string name="permissions_needed">Permisos de cámara y micrófono necesarios. Por favor, permita en la Configuración de la Aplicación para una funcionalidad adicional.</string>
+    <string name="error_retrieving_access_token">Error al recuperar el token</string>
+
+    <!-- chat -->
+    <string name="message">Escribe aqui tu mensaje...</string>
+    <string name="activitys_day">Actividades del día de hoy</string>
+
+    <string name="divace_bascula">Báscula</string>
+
+    <string name="txt_device_success">Dispositivo enlazado con éxito</string>
+
+    <string name="txt_error_scale_interno">Bascula no encontrada intente de nuevo.</string>
+
+    <!-- push -->
+    <string name="project_number">485085700061</string>
+    <string name="first_launch">First Launch</string>
+    <string name="num_of_missed_messages">MissedMessageCount</string>
+    <string name="lines_of_message_count">LinesOfMessageCount</string>
+    <string name="preferences">PreferencesFile</string>
+    <string name="notification_number">1337</string>
+    <!-- //// -->
+    <string name="hora_atencion">El horario de atención es de Lunes a Viernes de 9 am a 6 pm</string>
+    <string name="hora_previa">No puedes seleccionar una hora previa a la actual</string>
+    <string name="hora_fin_invalida">La hora fin no puede ser menor a la hora de inicio</string>
+    <string name="dia_invalido">No se puede seleccionar una fecha mayor a 5 días hábiles.</string>
+    <string name="error_video">Lo sentimos, no se pudo reproducir el video. Intenta más tarde.</string>
+    <string name="error_generico">Lo sentimos, no se pudo realizar la operación. Intenta más tarde.</string>
+
+    <string name="txt_dr_video">Dr(a).</string>
+    <string name="txt_dr_view">Dr(a).____________</string>
+    <string name="txt_fail_get_token"> codigo: </string>
+
+    <string name="title_activity_video_dialog">VideoActivityDialog</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="storage_permission_rationale_title">Storage permission required</string>
+    <string name="storage_permition_rationale_message">In order to take a picture, you must grant this permission!</string>
+    <string name="storage_permission_denied_message">Storage permission is required in order to take a photo with the camera</string>
+
+</resources>
