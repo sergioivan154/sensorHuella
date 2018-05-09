@@ -15,8 +15,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@mipmap/ic_launcher" />
         <Space
             android:layout_width="wrap_content"
@@ -44,15 +44,6 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp" />
 
-        <TextView
-            android:id="@+id/fingerprint_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:text="@string/fingerprint_description"
-            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
-            android:textColor="?android:attr/textColorSecondary" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -72,6 +63,19 @@
                 android:text="Registrar" />
         </LinearLayout>
 
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/fingerprint_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/fingerprint_description"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+            android:textColor="?android:attr/textColorSecondary" />
 
         <ImageView
             android:id="@+id/fingerprint_icon"
