@@ -11,6 +11,8 @@ import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import sagarpa.planetmedia.com.sagarpapp.R
+import sagarpa.planetmedia.com.sagarpapp.View.Fragment.GaleriaFotoFragment
+import sagarpa.planetmedia.com.sagarpapp.View.Fragment.GaleriaHuellasFragment
 
 
 class HomeActivity: AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -61,10 +63,18 @@ class HomeActivity: AppCompatActivity(), NavigationView.OnNavigationItemSelected
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_gallery_pictures -> {
-
+                var fragment = GaleriaFotoFragment()
+                fragmentManager.beginTransaction()
+                        .replace(R.id.mainFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
             }
             R.id.nav_gallery_fingerprint -> {
-
+                var fragment = GaleriaHuellasFragment()
+                fragmentManager.beginTransaction()
+                        .replace(R.id.mainFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
             }
 
         }
