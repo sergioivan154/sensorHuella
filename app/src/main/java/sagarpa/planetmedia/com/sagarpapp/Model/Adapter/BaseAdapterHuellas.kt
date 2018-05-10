@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.item_huella.view.*
 import kotlinx.android.synthetic.main.item_photo.view.*
 import sagarpa.planetmedia.com.sagarpapp.R
 import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
+import sagarpa.planetmedia.com.sagarpapp.View.Dialog.DialogoHuella
 
 class BaseAdapterHuellas(var listDataPhoto: List<Huella>, var contextMain: Context) : RecyclerView.Adapter<BaseAdapterHuellas.VHolder>() {
     override fun onBindViewHolder(holder: VHolder, position: Int) {
@@ -32,6 +33,7 @@ class BaseAdapterHuellas(var listDataPhoto: List<Huella>, var contextMain: Conte
 
                 itemView.textNombre.text = huella.nombre
                 itemView.textEmail.text = huella.correo
+                itemView.setOnClickListener { DialogoHuella(context).show() }
             }
 
         }
