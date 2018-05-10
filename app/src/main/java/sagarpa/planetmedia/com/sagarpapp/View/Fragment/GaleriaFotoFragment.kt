@@ -33,7 +33,7 @@ class GaleriaFotoFragment:Fragment() {
 
         rvGalleryPhoto = view?.findViewById(R.id.rvGaleriaFotografica)!!
 
-        rvGalleryPhoto.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, !KeyDictionary.booleanTDefault)
+        rvGalleryPhoto.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, !KeyDictionary.booleanTDefault)
 
         listPhoto = mutableListOf<GalleryPhoto>()
 
