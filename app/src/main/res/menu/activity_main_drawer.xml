@@ -10,7 +10,7 @@
             android:title="Galería fotográfica" />
         <item
             android:id="@+id/nav_gallery_fingerprint"
-            android:icon="@drawable/ic_fp_40px"
+            android:icon="@drawable/fingerprint"
             android:title="Galería de huellas" />
 
     </group>
