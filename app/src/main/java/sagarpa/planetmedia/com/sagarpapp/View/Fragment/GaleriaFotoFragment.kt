@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +19,11 @@ import sagarpa.planetmedia.com.sagarpapp.R
 import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
 import java.io.File
 import java.nio.charset.Charset
+import android.graphics.Bitmap
+import android.widget.Toast
+import java.io.FileOutputStream
+import java.util.*
+
 
 class GaleriaFotoFragment:Fragment() {
 
@@ -37,20 +43,34 @@ class GaleriaFotoFragment:Fragment() {
 
         listPhoto = mutableListOf<GalleryPhoto>()
 
-        listPhoto.add(GalleryPhoto("Imagen1","","",0.0, 0.0, 0, 0, 0, ""))
+        SearchPhotoStorage()
+
+        /*listPhoto.add(GalleryPhoto("Imagen1","","",0.0, 0.0, 0, 0, 0, ""))
         listPhoto.add(GalleryPhoto("Imagen2","","",0.0, 0.0, 0, 0, 0, ""))
         listPhoto.add(GalleryPhoto("Imagen3","","",0.0, 0.0, 0, 0, 0, ""))
         listPhoto.add(GalleryPhoto("Imagen3","","",0.0, 0.0, 0, 0, 0, ""))
-        listPhoto.add(GalleryPhoto("Imagen4","","",0.0, 0.0, 0, 0, 0, ""))
+        listPhoto.add(GalleryPhoto("Imagen4","","",0.0, 0.0, 0, 0, 0, ""))*/
 
-        rvGalleryPhoto.adapter = BaseAdapterPhoto(listPhoto, context)
+
 
         return view
     }
 
-    /*protected fun SearchPhotoStorage() {
+    protected fun SearchPhotoStorage() {
 
-        var fileRuta = File(Environment.getExternalStorageDirectory().toString() + KeyDictionary.rutaNameFolder)
+        var myFolder = Environment.getExternalStorageDirectory().toString() + "/descaga"
+        var fi = File(myFolder)
+        if (!fi.exists()) {
+            if (!fi.mkdir()) {
+                Toast.makeText(context, myFolder + " can´t b created", Toast.LENGTH_LONG).show()
+            } else
+                Toast.makeText(context, myFolder + " can be created.", Toast.LENGTH_SHORT).show();
+        }else
+            Toast.makeText(context, myFolder +" already exits.", Toast.LENGTH_SHORT).show();
+
+        var fileRuta = File(Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/")
+
+        Log.e("Log", Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/" )
 
         val files = fileRuta.listFiles()
 
@@ -58,13 +78,16 @@ class GaleriaFotoFragment:Fragment() {
 
             if (file.isFile)
             {
+
                 val selectedImage = Uri.fromFile(file)
-                selectedImage.
                 val fileExtension: String = MimeTypeMap.getFileExtensionFromUrl(selectedImage.toString())
                 val mimeTypeMap = MimeTypeMap.getSingleton().getExtensionFromMimeType(fileExtension)
+
+                listPhoto.add(GalleryPhoto(file.name, fileExtension, selectedImage.authority, file.freeSpace.toDouble(), 0.0, 0, 0, 0,file.path))
+
             }
 
-            var exifInterface = ExifInterface(file.inputStream())
+            /*var exifInterface = ExifInterface(file.inputStream())
 
 
 
@@ -72,10 +95,12 @@ class GaleriaFotoFragment:Fragment() {
             file.bufferedReader(Charset.defaultCharset(), DEFAULT_BUFFER_SIZE).
             file.canonicalFile.nameWithoutExtension
             println("Extension " + file.extension)
-            file.isFile
+            file.isFile*/
 
         }
 
-    }*/
+        rvGalleryPhoto.adapter = BaseAdapterPhoto(listPhoto, context)
+
+    }
 
 }

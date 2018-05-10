@@ -29,6 +29,8 @@ class BaseAdapterPhoto(var listDataPhoto: List<GalleryPhoto>, var contextMain: C
 
             with(itemView) {
 
+                if (galleryPhoto.sDateImage.equals("jpg"))
+
                 textViewNamePhoto.text = galleryPhoto.sNameImage
 
             }
