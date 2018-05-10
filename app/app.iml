@@ -144,6 +144,7 @@
     <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout-solver:1.1.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.41@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-26.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.5@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:multidex-1.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment-26.0.0" level="project" />

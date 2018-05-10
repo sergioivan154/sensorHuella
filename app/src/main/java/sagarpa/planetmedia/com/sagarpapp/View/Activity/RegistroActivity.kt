@@ -10,6 +10,7 @@ import android.provider.MediaStore
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
@@ -19,9 +20,10 @@ import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_registro.*
 import sagarpa.planetmedia.com.sagarpapp.R
+import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript
+import sagarpa.planetmedia.com.sagarpapp.Utility.Memoria
 import java.io.File
 
 class RegistroActivity: AppCompatActivity() {
@@ -35,10 +37,28 @@ class RegistroActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
+        Memoria.nombre = ""
+        Memoria.email = ""
+        Memoria.pass = ""
+
         btnTomaHuella.setOnClickListener({
-            val intent = Intent(this,HuellasActivity::class.java)
-            finish()
-            startActivity(intent)
+
+            if(editPassword.text.toString() == editPasswordC.text.toString()) {
+
+                var owasp = AppUtilidadesEncript()
+
+                Memoria.nombre = owasp.Encriptar(editNombre.text.toString())
+                Memoria.email = owasp.Encriptar(editCorreo.text.toString())
+                Memoria.pass = owasp.Encriptar(editPassword.text.toString())
+
+                val intent = Intent(this, HuellasActivity::class.java)
+                finish()
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this, "las contraseñas no coinciden", Toast.LENGTH_LONG).show()
+            }
+
         })
 
         btnTomarFotografia.setOnClickListener({
