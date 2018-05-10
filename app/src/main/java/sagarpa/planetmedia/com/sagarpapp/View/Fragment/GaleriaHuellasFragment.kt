@@ -2,10 +2,18 @@ package sagarpa.planetmedia.com.sagarpapp.View.Fragment
 
 import android.app.Fragment
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.planetmedia.victoria.healthkit.utils.SagarpaPreferences
+
+import kotlinx.android.synthetic.main.fragment_galeria_huellas.view.*
+import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.BaseAdapterHuellas
+import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.Huella
 import sagarpa.planetmedia.com.sagarpapp.R
+import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript
+import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
 
 class GaleriaHuellasFragment : Fragment() {
 
@@ -15,6 +23,20 @@ class GaleriaHuellasFragment : Fragment() {
         // Inflate the layout for this fragment
 
         var view = inflater.inflate(R.layout.fragment_galeria_huellas, container, false)
+
+
+        //aqui se deben de listar todas las huellas registradas en el telefono
+
+        var huella = Huella(
+                AppUtilidadesEncript().Desencriptar(SagarpaPreferences(activity).getNombreSaved()),
+                AppUtilidadesEncript().Desencriptar(SagarpaPreferences(activity).getCorreoSaved()))
+        var lHuellas = ArrayList<Huella>()
+        lHuellas.add(huella)
+
+        var adapter = BaseAdapterHuellas(lHuellas, context)
+
+        view.rvGaleriaHuellas.adapter = adapter
+        view.rvGaleriaHuellas.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, !KeyDictionary.booleanTDefault)
 
 
         return view
