@@ -62,12 +62,12 @@
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/editNombre"
+            android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="nombre"
+            android:hint="password"
             android:inputType="textPersonName" />
 
         <Space
