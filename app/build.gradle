@@ -35,4 +35,5 @@ dependencies {
     implementation 'com.facebook.fresco:fresco:1.4.0'
     implementation 'com.karumi:dexter:4.1.0'
     implementation group: 'commons-codec', name: 'commons-codec', version: '1.5'
+    implementation 'com.multidots:fingerprint-auth:1.0.1'
 }
