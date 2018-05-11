@@ -91,7 +91,7 @@ class GaleriaFotoFragment:Fragment() {
                 val fileExtension: String = MimeTypeMap.getFileExtensionFromUrl(selectedImage.toString())
                 val mimeTypeMap = MimeTypeMap.getSingleton().getExtensionFromMimeType(fileExtension)
 
-                listPhoto.add(GalleryPhoto(file.name, fileExtension, selectedImage.authority, file.freeSpace.toDouble(), 0.0, 0, 0, 0,file.path))
+                listPhoto.add(GalleryPhoto(file, file.name, fileExtension, selectedImage.authority, file.freeSpace.toDouble(), 0.0, 0, 0, 0,file.path))
 
             }
 

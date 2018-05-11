@@ -13,13 +13,15 @@ class EncodeTask : AsyncTask<GalleryPhoto, Int, GalleryPhoto> {
         this.activityMain = activity
     }
 
-    override fun doInBackground(vararg params: GalleryPhoto?): GalleryPhoto {
+    override fun doInBackground(vararg params: GalleryPhoto?): GalleryPhoto? {
 
         var galleryPhotoTask: GalleryPhoto? = null
 
         if (params.size > 0) {
             galleryPhotoTask = params[0]
         }
+
+        return null
 
     }
 

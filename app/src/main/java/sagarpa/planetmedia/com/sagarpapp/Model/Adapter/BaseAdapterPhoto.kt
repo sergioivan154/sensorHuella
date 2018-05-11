@@ -12,7 +12,7 @@ import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
 
 class BaseAdapterPhoto(var listDataPhoto: List<GalleryPhoto>, var contextMain: Context) : RecyclerView.Adapter<BaseAdapterPhoto.VHolder>() {
     override fun onBindViewHolder(holder: VHolder, position: Int) {
-        holder?.onStartView(listDataPhoto[position], contextMain)
+        holder.onStartView(listDataPhoto[position], contextMain)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VHolder{
