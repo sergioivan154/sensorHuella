@@ -1,8 +1,18 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-v4-27.1.1">
     <CLASSES>
+<<<<<<< Updated upstream:.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/384643d2ef8a56d982a14ce62f8f3f61/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/384643d2ef8a56d982a14ce62f8f3f61/jars/classes.jar!/" />
+=======
+<<<<<<< Updated upstream:.idea/libraries/Gradle__com_android_support_support_v4_26_0_0.xml
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/f260d46bc75c3dfee65ca3a52b03f1c1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/f260d46bc75c3dfee65ca3a52b03f1c1/res" />
+=======
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/222b64cacf8ecc9a325aca9127149045/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/222b64cacf8ecc9a325aca9127149045/res" />
+>>>>>>> Stashed changes:.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml
+>>>>>>> Stashed changes:.idea/libraries/Gradle__com_android_support_support_v4_26_0_0.xml
     </CLASSES>
     <JAVADOC />
     <SOURCES>

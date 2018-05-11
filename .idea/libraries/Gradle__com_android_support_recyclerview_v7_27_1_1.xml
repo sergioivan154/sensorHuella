@@ -1,8 +1,18 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:recyclerview-v7-27.1.1">
     <CLASSES>
+<<<<<<< Updated upstream:.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/3c77d83ece90815e64c0e55924428769/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/3c77d83ece90815e64c0e55924428769/res" />
+=======
+<<<<<<< Updated upstream:.idea/libraries/Gradle__com_android_support_recyclerview_v7_26_0_0.xml
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/617961005cdfcca4fcd0149c357f5b13/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/617961005cdfcca4fcd0149c357f5b13/res" />
+=======
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/2a43fbcbbbf99d63bf0c91130060bb7c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/2a43fbcbbbf99d63bf0c91130060bb7c/res" />
+>>>>>>> Stashed changes:.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml
+>>>>>>> Stashed changes:.idea/libraries/Gradle__com_android_support_recyclerview_v7_26_0_0.xml
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -21,10 +21,13 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_registro.*
+import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.GalleryPhoto
+import sagarpa.planetmedia.com.sagarpapp.Presenter.BasePresenter.RegistryUserEncode
 import sagarpa.planetmedia.com.sagarpapp.R
 import java.io.File
 
-class RegistroActivity: AppCompatActivity() {
+class RegistroActivity: AppCompatActivity(), RegistryUserEncode {
+
 
 
     private val TAKE_PHOTO_REQUEST = 101
@@ -130,4 +133,11 @@ class RegistroActivity: AppCompatActivity() {
                 .build()
         imgvPhoto?.controller = controller
     }
+
+    override fun RegistryUserSelectedToEncode(filePhoto: File, dataGalleryPhoto: GalleryPhoto) {
+
+
+
+    }
+
 }

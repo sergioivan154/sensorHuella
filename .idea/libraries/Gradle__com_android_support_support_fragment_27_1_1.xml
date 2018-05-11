@@ -1,8 +1,18 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-fragment-27.1.1">
     <CLASSES>
+<<<<<<< Updated upstream:.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/c521e68d14e779e5fd8cc7ef00834657/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/c521e68d14e779e5fd8cc7ef00834657/res" />
+=======
+<<<<<<< Updated upstream:.idea/libraries/Gradle__com_android_support_support_fragment_26_0_0.xml
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/0a1183e9e1a37309643287c6c617aefe/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/0a1183e9e1a37309643287c6c617aefe/jars/classes.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/a216059f61d9707cc301b224c7bf5260/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/a216059f61d9707cc301b224c7bf5260/jars/classes.jar!/" />
+>>>>>>> Stashed changes:.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml
+>>>>>>> Stashed changes:.idea/libraries/Gradle__com_android_support_support_fragment_26_0_0.xml
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -23,6 +23,9 @@ import android.graphics.Bitmap
 import android.widget.Toast
 import java.io.FileOutputStream
 import java.util.*
+import android.graphics.BitmapFactory
+
+
 
 
 class GaleriaFotoFragment:Fragment() {
@@ -78,6 +81,11 @@ class GaleriaFotoFragment:Fragment() {
 
             if (file.isFile)
             {
+
+                val myBitmap = BitmapFactory.decodeFile(file.absolutePath)
+
+                //myBitmap.
+
 
                 val selectedImage = Uri.fromFile(file)
                 val fileExtension: String = MimeTypeMap.getFileExtensionFromUrl(selectedImage.toString())

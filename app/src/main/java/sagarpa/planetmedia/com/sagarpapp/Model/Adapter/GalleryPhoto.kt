@@ -1,9 +1,12 @@
 package sagarpa.planetmedia.com.sagarpapp.Model.Adapter
 
+import android.graphics.Bitmap
 import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
+import java.io.File
 import java.io.Serializable
 
-data class GalleryPhoto(val sNameImage: String = KeyDictionary.stringDefault,
+data class GalleryPhoto(val filePhoto: File,
+                        val sNameImage: String = KeyDictionary.stringDefault,
                         val sDateImage: String = KeyDictionary.stringDefault,
                         val sTimeImage: String = KeyDictionary.stringDefault,
                         val dLatitudImage: Double = KeyDictionary.doubleDefault,

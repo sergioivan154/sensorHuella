@@ -1,8 +1,18 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:transition-27.1.1">
     <CLASSES>
+<<<<<<< Updated upstream:.idea/libraries/Gradle__com_android_support_transition_27_1_1.xml
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/8eeff330bed31a37a635cf2965093ced/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/8eeff330bed31a37a635cf2965093ced/res" />
+=======
+<<<<<<< Updated upstream:.idea/libraries/Gradle__com_android_support_transition_26_0_0.xml
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/a891a6bb24262095171cceb0b2b123e9/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/a891a6bb24262095171cceb0b2b123e9/jars/classes.jar!/" />
+=======
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/c1f8b2d3fbe2b37b2764b89640fec6fc/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/c1f8b2d3fbe2b37b2764b89640fec6fc/res" />
+>>>>>>> Stashed changes:.idea/libraries/Gradle__com_android_support_transition_27_1_1.xml
+>>>>>>> Stashed changes:.idea/libraries/Gradle__com_android_support_transition_26_0_0.xml
     </CLASSES>
     <JAVADOC />
     <SOURCES>
