@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Base64
 import android.view.View
 import android.widget.Toast
-import com.planetmedia.victoria.healthkit.utils.SagarpaPreferences
 import kotlinx.android.synthetic.main.activity_huellas.*
 import sagarpa.planetmedia.com.sagarpapp.R
 import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript

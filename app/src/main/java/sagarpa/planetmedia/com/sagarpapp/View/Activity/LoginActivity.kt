@@ -14,7 +14,6 @@ import android.view.View
 import android.widget.Toast
 import asia.kanopi.fingerscan.Fingerprint
 import asia.kanopi.fingerscan.Status
-import com.planetmedia.victoria.healthkit.utils.SagarpaPreferences
 
 
 import kotlinx.android.synthetic.main.activity_login.*
