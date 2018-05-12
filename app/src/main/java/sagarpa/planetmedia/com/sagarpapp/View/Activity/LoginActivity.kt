@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val con = ConexionSQLiteHelper(this, "sqLiteDatabase_user", null, 1)
+        val con = ConexionSQLiteHelper(this, "sqLiteDatabase_user", null)
 
         btnIniciarSesion.setOnClickListener({
 

@@ -24,7 +24,7 @@ class GaleriaHuellasFragment : Fragment() {
         // Inflate the layout for this fragment
 
         var view = inflater.inflate(R.layout.fragment_galeria_huellas, container, false)
-        val con = ConexionSQLiteHelper(context, "sqLiteDatabase_user", null, 1)
+        val con = ConexionSQLiteHelper(context, "sqLiteDatabase_user", null)
 
 
         //aqui se deben de listar todas las huellas registradas en el telefono

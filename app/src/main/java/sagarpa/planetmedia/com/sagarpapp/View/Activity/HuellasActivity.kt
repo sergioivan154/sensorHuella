@@ -42,7 +42,7 @@ class HuellasActivity: AppCompatActivity() {
     }
 
     private fun registrarUser() {
-        val con = ConexionSQLiteHelper(this, "sqLiteDatabase_user", null, 1)
+        val con = ConexionSQLiteHelper(this, "sqLiteDatabase_user", null)
         val db = con.writableDatabase
         val values = ContentValues()
 
@@ -71,6 +71,13 @@ class HuellasActivity: AppCompatActivity() {
         super.onStop()
     }
 
+    fun reboot(){
+
+            fingerprint_description.setText("Reader is off")
+            fingerprint?.scan(this@HuellasActivity, printHandler, updateHandler)
+
+
+    }
 
     internal var updateHandler: Handler = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
@@ -83,7 +90,7 @@ class HuellasActivity: AppCompatActivity() {
                 Status.FINGER_DETECTED -> fingerprint_description.setText("Finger detected")
                 Status.RECEIVING_IMAGE -> fingerprint_description.setText("Receiving image")
                 Status.FINGER_LIFTED -> fingerprint_description.setText("Finger has been lifted off reader")
-                Status.SCANNER_POWERED_OFF -> fingerprint_description.setText("Reader is off")
+                Status.SCANNER_POWERED_OFF -> reboot()
                 Status.SUCCESS -> fingerprint_description.setText("Fingerprint successfully captured")
                 Status.ERROR -> {
                     fingerprint_description.setText("Error")
@@ -116,7 +123,7 @@ class HuellasActivity: AppCompatActivity() {
 
                 val bm = BitmapFactory.decodeByteArray(image, 0, image.size)
                 fingerprint_icon.setImageBitmap(bm)
-                Memoria.huella = Base64.encodeToString(image, Base64.NO_WRAP)
+                Memoria.huella = AppUtilidadesEncript().Encriptar(Base64.encodeToString(image, Base64.NO_WRAP))
 
 /*                intent.putExtra("img", image)
 

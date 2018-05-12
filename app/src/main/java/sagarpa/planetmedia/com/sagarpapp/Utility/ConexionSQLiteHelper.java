@@ -18,8 +18,8 @@ import sagarpa.planetmedia.com.sagarpapp.Model.Entity.User;
 public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
 
-    public ConexionSQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public ConexionSQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory) {
+        super(context, name, factory, 2);
     }
 
     @Override
@@ -65,7 +65,12 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
                 // Passing values
                 String column1 = c.getString(0);
                 String column2 = c.getString(1);
-                String column3 = c.getString(2);
+                String column3 = null;
+                try {
+                    column3 = new AppUtilidadesEncript().Desencriptar(c.getString(2));
+                } catch (Exception e) {
+                    column3 = "";
+                }
 
                 byte[] decodedString = Base64.decode(column3, Base64.DEFAULT);
                 Bitmap bm = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
