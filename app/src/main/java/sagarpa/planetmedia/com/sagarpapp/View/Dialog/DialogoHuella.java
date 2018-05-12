@@ -30,12 +30,12 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
     private Fingerprint fingerprint = new Fingerprint();
     private ImageView fingerRegister, fingerActual, imEstatus;
     private TextView txtMensajes, txtEstatus ;
-    private Bitmap fingerRegisterBm;
+    public Bitmap fingerRegisterBm;
     private ProgressBar progress, progressSensor;
 
 
 
-    public DialogoHuella(@NonNull Context context, Bitmap fingerRegisterBm) {
+    public DialogoHuella(@NonNull Context context) {
         super(context);
 
 
@@ -56,22 +56,25 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
 
         progress =  findViewById(R.id.progress);
         progressSensor =  findViewById(R.id.progresslector);
-
-        fingerRegister.setImageBitmap(fingerRegisterBm);
         fingerprint.scan(context, printHandler, updateHandler);
-        this.fingerRegisterBm = fingerRegisterBm;
 
         findViewById(R.id.btnSensor).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(progressSensor.getVisibility() == View.GONE) {
+
 
                     fingerprint.scan(getContext(), printHandler, updateHandler);
 
-                }
+
             }
         });
 
+
+    }
+
+    public void setHuella(Bitmap fingerRegisterBm){
+        fingerRegister.setImageBitmap(fingerRegisterBm);
+        this.fingerRegisterBm = fingerRegisterBm;
 
     }
 
@@ -79,7 +82,7 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
     public void onClick(View v) {
 
         fingerprint.turnOffReader();
-        hide();
+        dismiss();
 
     }
 
@@ -90,33 +93,33 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
             txtMensajes.setText("");
             switch (status) {
                 case Status.INITIALISED:
-                    txtMensajes.setText("Setting up reader");
+                    txtMensajes.setText("Configurando lector");
 
                     break;
                 case Status.SCANNER_POWERED_ON:
-                    txtMensajes.setText("Reader powered on");
+                    txtMensajes.setText("EL lector esta encendido");
 
                     progressSensor.setVisibility(View.GONE);
                     break;
                 case Status.READY_TO_SCAN:
-                    txtMensajes.setText("Ready to scan finger");
+                    txtMensajes.setText("El lector esta listo para escanear");
                     break;
                 case Status.FINGER_DETECTED:
-                    txtMensajes.setText("Finger detected");
+                    txtMensajes.setText("Dedo detectado");
                     break;
                 case Status.RECEIVING_IMAGE:
-                    txtMensajes.setText("Receiving image");
+                    txtMensajes.setText("Reciviendo imagen");
                     break;
                 case Status.FINGER_LIFTED:
-                    txtMensajes.setText("Finger has been lifted off reader");
+                    txtMensajes.setText("El dedo ha dejado el sensor");
                     break;
                 case Status.SCANNER_POWERED_OFF:
-                    txtMensajes.setText("Reader is off");
+                    txtMensajes.setText("El sensor esta apagado, iniciar nuevamente");
                     fingerprint.scan(getContext(), printHandler, updateHandler);
 
                     break;
                 case Status.SUCCESS:
-                    txtMensajes.setText("Fingerprint successfully captured");
+                    txtMensajes.setText("Se capturo la huella");
                     break;
                 case Status.ERROR:
                     txtMensajes.setText("Error");

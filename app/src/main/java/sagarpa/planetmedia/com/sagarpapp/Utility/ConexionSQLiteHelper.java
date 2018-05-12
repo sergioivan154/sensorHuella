@@ -36,7 +36,8 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     public List<User> selectUser(String email){
         List<User> lUsuarios = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT " + Utilities.CampName  + "," + Utilities.CampPassword  +  " FROM " + Utilities.TABLEuser +" WHERE "+ Utilities.CampEmail  + " = "+ email, null);
+        String query = "SELECT " + Utilities.CampName  + "," + Utilities.CampPassword  +  " FROM " + Utilities.TABLEuser +" WHERE "+ Utilities.CampEmail  + " = '"+ new AppUtilidadesEncript().Encriptar(email)+"'";
+        Cursor c = db.rawQuery(query, null);
         if (c.moveToFirst()){
             do {
                 // Passing values

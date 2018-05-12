@@ -82,7 +82,7 @@ class HuellasActivity: AppCompatActivity() {
 
     fun reboot(){
 
-            fingerprint_description.setText("Reader is off")
+            fingerprint_description.setText("nueva toma iniciada")
             fingerprint?.scan(this@HuellasActivity, printHandler, updateHandler)
 
 
@@ -93,18 +93,18 @@ class HuellasActivity: AppCompatActivity() {
             val status = msg.data.getInt("status")
             fingerprint_description.setText("")
             when (status) {
-                Status.INITIALISED -> fingerprint_description.setText("Setting up reader")
+                Status.INITIALISED -> fingerprint_description.setText("Configurando lector")
                 Status.SCANNER_POWERED_ON ->{
-                    fingerprint_description.setText("Reader powered on")
+                    fingerprint_description.setText("EL lector esta encendido")
                     progress.visibility = View.GONE
 
                 }
-                Status.READY_TO_SCAN -> fingerprint_description.setText("Ready to scan finger")
-                Status.FINGER_DETECTED -> fingerprint_description.setText("Finger detected")
-                Status.RECEIVING_IMAGE -> fingerprint_description.setText("Receiving image")
-                Status.FINGER_LIFTED -> fingerprint_description.setText("Finger has been lifted off reader")
+                Status.READY_TO_SCAN -> fingerprint_description.setText("El lector esta listo para escanear")
+                Status.FINGER_DETECTED -> fingerprint_description.setText("Dedo detectado")
+                Status.RECEIVING_IMAGE -> fingerprint_description.setText("Reciviendo imagen")
+                Status.FINGER_LIFTED -> fingerprint_description.setText("El dedo ha dejado el sensor")
                 Status.SCANNER_POWERED_OFF -> reboot()
-                Status.SUCCESS -> fingerprint_description.setText("Fingerprint successfully captured")
+                Status.SUCCESS -> fingerprint_description.setText("Se capturo la huella")
                 Status.ERROR -> {
                     fingerprint_description.setText("Error")
                     fingerprint_description.setText(msg.data.getString("errorMessage"))

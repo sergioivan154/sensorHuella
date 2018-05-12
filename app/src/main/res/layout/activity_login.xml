@@ -14,11 +14,7 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:orientation="vertical">
-        <Button
-            android:id="@+id/btnSensor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Iniciar Lector"/>
+
 
         <ImageView
             android:layout_width="100dp"
@@ -107,7 +103,11 @@
                 android:visibility="gone"/>
 
         </RelativeLayout>
-
+        <Button
+            android:id="@+id/btnSensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Lector"/>
         <ImageView
             android:paddingTop="10dp"
             android:id="@+id/fingerprint_status"

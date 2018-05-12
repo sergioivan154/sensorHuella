@@ -28,14 +28,21 @@ class BaseAdapterHuellas(var listDataPhoto: List<Huella>, var contextMain: Conte
 
     class VHolder(iV: View) : RecyclerView.ViewHolder(iV) {
 
+
         fun onStartView(huella: Huella, contextMain: Context) {
 
+            val dialogo = DialogoHuella(contextMain)
             with(itemView) {
 
                 itemView.textNombre.text = AppUtilidadesEncript().Desencriptar(huella.nombre)
                 itemView.textEmail.text = AppUtilidadesEncript().Desencriptar(huella.correo)
                 itemView.imageView_Huella.setImageBitmap(huella.huella)
-                itemView.setOnClickListener { DialogoHuella(context, huella.huella).show() }
+                itemView.setOnClickListener {
+                    if(!dialogo.isShowing) {
+                        dialogo.setHuella(huella.huella)
+                        dialogo.show()
+                    }
+                }
 
 
             }
