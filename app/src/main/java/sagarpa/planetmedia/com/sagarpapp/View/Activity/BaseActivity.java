@@ -154,7 +154,7 @@ public class BaseActivity extends AppCompatActivity implements BaseActivityContr
                 dialogConfirm.show();
 
                 DisplayMetrics metrics = context.getResources().getDisplayMetrics();
-                float dp = 500f;
+                float dp = 250f;
                 float fpixels = metrics.density * dp;
                 int pixels = Math.round(fpixels + 0.5f);
                 Window window = dialogConfirm.getWindow();

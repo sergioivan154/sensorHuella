@@ -16,6 +16,8 @@ import java.util.List;
 import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.MobiStegoItem;
 import sagarpa.planetmedia.com.sagarpapp.Model.Steganography.LSB2bit;
 import sagarpa.planetmedia.com.sagarpapp.Model.Steganography.ReadBitPhoto;
+import sagarpa.planetmedia.com.sagarpapp.Utility.Memoria;
+import sagarpa.planetmedia.com.sagarpapp.View.Activity.BaseActivity;
 import sagarpa.planetmedia.com.sagarpapp.View.Activity.HuellasActivity;
 
 public class EncodeTask extends AsyncTask<MobiStegoItem, Integer, MobiStegoItem> {
@@ -24,11 +26,11 @@ public class EncodeTask extends AsyncTask<MobiStegoItem, Integer, MobiStegoItem>
 
     private int maxProgeress;
 
-    private Activity activity;
+    private BaseActivity activity;
 
     //private ProgressDialog progressDialog;
 
-    public EncodeTask(Activity act) {
+    public EncodeTask(BaseActivity act) {
         super();
         this.activity = act;
     }
@@ -141,6 +143,7 @@ public class EncodeTask extends AsyncTask<MobiStegoItem, Integer, MobiStegoItem>
         //MainFragment mainFragment = new MainFragment();
         //mainFragment.setArguments(args);
         ReadBitPhoto.listMobistegoItem(activity);
+        activity.hideProgressDialog();
 
         Intent intent = new Intent(activity, HuellasActivity.class);
         activity.finish();

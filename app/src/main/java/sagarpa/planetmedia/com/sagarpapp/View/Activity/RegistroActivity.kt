@@ -41,7 +41,9 @@ import sagarpa.planetmedia.com.sagarpapp.Presenter.GPU
 import sagarpa.planetmedia.com.sagarpapp.Presenter.Task.EncodeTask
 import sagarpa.planetmedia.com.sagarpapp.Presenter.Task.EncodeTaskK
 import sagarpa.planetmedia.com.sagarpapp.R
+import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript
 import sagarpa.planetmedia.com.sagarpapp.Utility.Constants
+import sagarpa.planetmedia.com.sagarpapp.Utility.Memoria
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -84,6 +86,7 @@ class RegistroActivity: BaseActivity(), RegistryUserEncode, GoogleApiClient.Conn
             //finish()
             //startActivity(intent)
 
+
             var calendar = Calendar.getInstance()
             var simpledate = SimpleDateFormat("dd-MM-yyyy")
             var simpleTime = SimpleDateFormat("HH:mm:ss")
@@ -102,9 +105,9 @@ class RegistroActivity: BaseActivity(), RegistryUserEncode, GoogleApiClient.Conn
                     editPassword.text.toString() != null &&
                     editPassword.text.toString() != "" &&
                     editText.text.toString() != null &&
-                    editText.text.toString() != "") {
+                    editText.text.toString() != "" &&(editPassword.text.toString() == editPasswordC.text.toString())) {
 
-                galleryImage = GalleryPhoto(filExample!!, editCorreo.text.toString(), dateFinal, timeFinal, mCurrentLocation?.latitude!!, mCurrentLocation?.longitude!!,
+                galleryImage = GalleryPhoto(filExample!!, editText.text.toString(), dateFinal, timeFinal, mCurrentLocation?.latitude!!, mCurrentLocation?.longitude!!,
                         sizeImage, imageWidth, imageHeight)
 
 
@@ -117,7 +120,11 @@ class RegistroActivity: BaseActivity(), RegistryUserEncode, GoogleApiClient.Conn
                         "${galleryImage?.iWithImage}," +
                         "${galleryImage?.iHeightImage}"
 
-                Toast.makeText(context, "Espere un momento guardando...", Toast.LENGTH_LONG).show()
+                showProgressDialog()
+                val encriptar = AppUtilidadesEncript()
+                Memoria.nombre = encriptar.Encriptar(editText.text.toString())
+                Memoria.email = encriptar.Encriptar(editCorreo.text.toString())
+                Memoria.pass = encriptar.Encriptar(editPassword.text.toString())
 
                 val task = EncodeTask(this)
                 val item2 = MobiStegoItem(sMessageComplete, filExample, Constants.NO_NAME, false, null)

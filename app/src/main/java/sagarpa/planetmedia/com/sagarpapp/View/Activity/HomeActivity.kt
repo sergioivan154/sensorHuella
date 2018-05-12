@@ -30,6 +30,12 @@ class HomeActivity: BaseActivity(), NavigationView.OnNavigationItemSelectedListe
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        var fragment = GaleriaFotoFragment()
+        fragmentManager.beginTransaction()
+                .replace(R.id.mainFragment, fragment)
+                .addToBackStack(null)
+                .commit()
     }
 
     override fun onBackPressed() {
