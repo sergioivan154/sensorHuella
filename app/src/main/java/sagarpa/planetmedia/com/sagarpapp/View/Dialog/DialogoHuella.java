@@ -28,7 +28,7 @@ import sagarpa.planetmedia.com.sagarpapp.Utility.Biometrico.BiometricoResponse;
 public class DialogoHuella extends Dialog implements View.OnClickListener {
 
     private Fingerprint fingerprint = new Fingerprint();
-    private ImageView fingerRegister, fingerActual;
+    private ImageView fingerRegister, fingerActual, imEstatus;
     private TextView txtMensajes, txtEstatus ;
     private Bitmap fingerRegisterBm;
     private ProgressBar progress, progressSensor;
@@ -49,6 +49,7 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
         findViewById(R.id.btnAceptar).setOnClickListener(this);
         fingerRegister = findViewById(R.id.fingerprint_register);
         fingerActual = findViewById(R.id.fingerprint_actual);
+        imEstatus = findViewById(R.id.autentificacion);
 
        txtMensajes =  findViewById(R.id.fingerprint_description);
         txtEstatus =  findViewById(R.id.fingerprint_status);
@@ -165,13 +166,17 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
             public void response(boolean respuesta, int compatibilidad) {
                 if(respuesta){
 
-                    txtEstatus.setText("eres autentico al "+ compatibilidad +":D");
+
+                    txtEstatus.setText("Huella válida");
+                    imEstatus.setImageResource(R.drawable.check);
                 }
                 else{
 
-                    txtEstatus.setText("No eres el usario "+ compatibilidad +":'(");
+                    txtEstatus.setText("Huella invalida\nIntente nuevamente");
+                    imEstatus.setImageResource(R.drawable.noentry);
                 }
                 progress.setVisibility(View.INVISIBLE);
+                imEstatus.setVisibility(View.VISIBLE);
 
             }
         });
