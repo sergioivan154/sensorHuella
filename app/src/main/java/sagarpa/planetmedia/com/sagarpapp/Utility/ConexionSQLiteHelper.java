@@ -19,7 +19,7 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
 
     public ConexionSQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory) {
-        super(context, name, factory, 2);
+        super(context, name, factory, 3);
     }
 
     @Override

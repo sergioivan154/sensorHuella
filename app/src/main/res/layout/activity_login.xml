@@ -18,7 +18,7 @@
             android:id="@+id/btnSensor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reconocer Lector"/>
+            android:text="Iniciar Lector"/>
 
         <ImageView
             android:layout_width="100dp"
