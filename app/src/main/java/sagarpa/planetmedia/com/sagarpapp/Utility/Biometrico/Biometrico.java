@@ -20,10 +20,8 @@ public class Biometrico {
 
     }
 
-    public void compararHuellas(byte[] huella1, byte[] huella2, BiometricoResponse biometricoResponse){
+    public void compararHuellas(Bitmap imgHuella1,  Bitmap imgHuella2, BiometricoResponse biometricoResponse){
 
-        Bitmap imgHuella1 = BitmapFactory.decodeByteArray(huella1, 0, huella1.length);
-        Bitmap imgHuella2 =  BitmapFactory.decodeByteArray(huella2, 0, huella2.length);
         m_finger1.setFingerPrintImage(imgHuella1);
         m_finger2.setFingerPrintImage(imgHuella2);
         finger1=m_finger1.getFingerPrintTemplate();

@@ -69,12 +69,10 @@ class LoginActivity : AppCompatActivity() {
 
         progress.visibility = View.VISIBLE
         fingerprint_icon.visibility = View.INVISIBLE
-        val uno = Base64.encodeToString(finger1, Base64.NO_WRAP)
-        val dos = Base64.encodeToString(finger2, Base64.NO_WRAP)
 
         val bio = Biometrico(this)
 
-
+/*
         bio.compararHuellas(finger1, finger2) { respuesta, compatibilidad ->
             if(respuesta) {
 
@@ -90,7 +88,7 @@ class LoginActivity : AppCompatActivity() {
             fingerprint_icon.visibility = View.VISIBLE
             progress.visibility = View.INVISIBLE
 
-        }
+        }*/
 
 
 

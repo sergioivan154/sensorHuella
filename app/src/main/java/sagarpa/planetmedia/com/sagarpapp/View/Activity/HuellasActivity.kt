@@ -10,6 +10,7 @@ import android.os.Looper
 import android.os.Message
 import android.support.v7.app.AppCompatActivity
 import android.util.Base64
+import android.view.View
 import android.widget.Toast
 import com.planetmedia.victoria.healthkit.utils.SagarpaPreferences
 import kotlinx.android.synthetic.main.activity_huellas.*
@@ -25,10 +26,18 @@ import asia.kanopi.fingerscan.Status
 class HuellasActivity: AppCompatActivity() {
 
     private var fingerprint: Fingerprint? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_huellas)
 
+
+        btnSensor.setOnClickListener({
+
+                fingerprint?.scan(this, printHandler, updateHandler)
+
+        })
         btnRegistrar.setOnClickListener {
 
             if (Memoria.huella != "") {
@@ -85,7 +94,11 @@ class HuellasActivity: AppCompatActivity() {
             fingerprint_description.setText("")
             when (status) {
                 Status.INITIALISED -> fingerprint_description.setText("Setting up reader")
-                Status.SCANNER_POWERED_ON -> fingerprint_description.setText("Reader powered on")
+                Status.SCANNER_POWERED_ON ->{
+                    fingerprint_description.setText("Reader powered on")
+                    progress.visibility = View.GONE
+
+                }
                 Status.READY_TO_SCAN -> fingerprint_description.setText("Ready to scan finger")
                 Status.FINGER_DETECTED -> fingerprint_description.setText("Finger detected")
                 Status.RECEIVING_IMAGE -> fingerprint_description.setText("Receiving image")

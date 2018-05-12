@@ -18,6 +18,7 @@ import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
 
 class GaleriaHuellasFragment : Fragment() {
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 

@@ -9,10 +9,12 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
+import android.util.Base64;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -20,15 +22,23 @@ import org.w3c.dom.Text;
 import asia.kanopi.fingerscan.Fingerprint;
 import asia.kanopi.fingerscan.Status;
 import sagarpa.planetmedia.com.sagarpapp.R;
+import sagarpa.planetmedia.com.sagarpapp.Utility.Biometrico.Biometrico;
+import sagarpa.planetmedia.com.sagarpapp.Utility.Biometrico.BiometricoResponse;
 
 public class DialogoHuella extends Dialog implements View.OnClickListener {
 
     private Fingerprint fingerprint = new Fingerprint();
     private ImageView fingerRegister, fingerActual;
-    private TextView txtMensajes ;
+    private TextView txtMensajes, txtEstatus ;
+    private Bitmap fingerRegisterBm;
+    private ProgressBar progress, progressSensor;
+
+
 
     public DialogoHuella(@NonNull Context context, Bitmap fingerRegisterBm) {
         super(context);
+
+
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_huellas);
@@ -41,8 +51,27 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
         fingerActual = findViewById(R.id.fingerprint_actual);
 
        txtMensajes =  findViewById(R.id.fingerprint_description);
+        txtEstatus =  findViewById(R.id.fingerprint_status);
+
+        progress =  findViewById(R.id.progress);
+        progressSensor =  findViewById(R.id.progresslector);
+
         fingerRegister.setImageBitmap(fingerRegisterBm);
         fingerprint.scan(context, printHandler, updateHandler);
+        this.fingerRegisterBm = fingerRegisterBm;
+
+        findViewById(R.id.btnSensor).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(progressSensor.getVisibility() == View.GONE) {
+
+                    fingerprint.scan(getContext(), printHandler, updateHandler);
+
+                }
+            }
+        });
+
+
     }
 
     @Override
@@ -50,6 +79,7 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
 
         fingerprint.turnOffReader();
         hide();
+
     }
 
     Handler updateHandler = new Handler(Looper.getMainLooper()) {
@@ -60,9 +90,12 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
             switch (status) {
                 case Status.INITIALISED:
                     txtMensajes.setText("Setting up reader");
+
                     break;
                 case Status.SCANNER_POWERED_ON:
                     txtMensajes.setText("Reader powered on");
+
+                    progressSensor.setVisibility(View.GONE);
                     break;
                 case Status.READY_TO_SCAN:
                     txtMensajes.setText("Ready to scan finger");
@@ -78,6 +111,8 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
                     break;
                 case Status.SCANNER_POWERED_OFF:
                     txtMensajes.setText("Reader is off");
+                    fingerprint.scan(getContext(), printHandler, updateHandler);
+
                     break;
                 case Status.SUCCESS:
                     txtMensajes.setText("Fingerprint successfully captured");
@@ -108,6 +143,8 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
 
                 Bitmap bm = BitmapFactory.decodeByteArray(image, 0, image.length);
                 fingerActual.setImageBitmap(bm);
+
+                validar(fingerRegisterBm, bm);
             } else {
                 errorMessage = msg.getData().getString("errorMessage");
 
@@ -116,4 +153,29 @@ public class DialogoHuella extends Dialog implements View.OnClickListener {
         }
     };
 
+    public void validar(Bitmap fingerRegister, Bitmap fingerValidacion) {
+
+        Biometrico bio = new Biometrico(getContext());
+
+        progress.setVisibility(View.VISIBLE);
+
+
+        bio.compararHuellas(fingerRegister, fingerValidacion, new BiometricoResponse() {
+            @Override
+            public void response(boolean respuesta, int compatibilidad) {
+                if(respuesta){
+
+                    txtEstatus.setText("eres autentico al "+ compatibilidad +":D");
+                }
+                else{
+
+                    txtEstatus.setText("No eres el usario "+ compatibilidad +":'(");
+                }
+                progress.setVisibility(View.INVISIBLE);
+
+            }
+        });
+
+
+    }
 }

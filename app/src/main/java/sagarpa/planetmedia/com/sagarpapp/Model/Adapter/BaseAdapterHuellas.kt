@@ -35,7 +35,7 @@ class BaseAdapterHuellas(var listDataPhoto: List<Huella>, var contextMain: Conte
                 itemView.textNombre.text = AppUtilidadesEncript().Desencriptar(huella.nombre)
                 itemView.textEmail.text = AppUtilidadesEncript().Desencriptar(huella.correo)
                 itemView.imageView_Huella.setImageBitmap(huella.huella)
-                itemView.setOnClickListener { DialogoHuella(context).show() }
+                itemView.setOnClickListener { DialogoHuella(context, huella.huella).show() }
 
 
             }

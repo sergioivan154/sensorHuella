@@ -7,6 +7,20 @@
     android:orientation="vertical"
     tools:context=".View.Activity.LoginActivity">
 
+    <Button
+        android:id="@+id/btnSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reconocer Lector"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,11 +46,12 @@
 
         <ImageView
             android:id="@+id/fingerprint_icon"
-            android:layout_width="384dp"
-            android:layout_height="290dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/fingerprint_description"
             android:layout_marginTop="20dp"
+            android:scaleType="centerInside"
             android:contentDescription="@string/description_fingerprint_icon"
             android:src="@drawable/ic_fp_40px" />
 
