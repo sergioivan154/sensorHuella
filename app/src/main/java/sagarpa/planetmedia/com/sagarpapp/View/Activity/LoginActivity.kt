@@ -26,7 +26,7 @@ import sagarpa.planetmedia.com.sagarpapp.Utility.Biometrico.BiometricoResponse
 import sagarpa.planetmedia.com.sagarpapp.Utility.ConexionSQLiteHelper
 import sagarpa.planetmedia.com.sagarpapp.Utility.Memoria
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     private val fingerprint = Fingerprint()
     var lHuellas: List<Huella>? = null

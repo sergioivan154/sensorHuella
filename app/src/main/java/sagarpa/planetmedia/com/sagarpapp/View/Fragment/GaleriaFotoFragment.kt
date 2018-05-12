@@ -23,9 +23,11 @@ import android.graphics.Bitmap
 import android.widget.Toast
 import java.io.FileOutputStream
 import java.util.*
+import android.graphics.BitmapFactory
+import sagarpa.planetmedia.com.sagarpapp.Model.Steganography.ReadBitPhoto
 
 
-class GaleriaFotoFragment:Fragment() {
+class GaleriaFotoFragment:BaseFragment() {
 
     lateinit var rvGalleryPhoto: RecyclerView
     lateinit var listPhoto: MutableList<GalleryPhoto>
@@ -70,34 +72,54 @@ class GaleriaFotoFragment:Fragment() {
 
         var fileRuta = File(Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/")
 
-        Log.e("Log", Environment.getExternalStorageDirectory().toString() + "/DCIM/Camera/" )
-
-        val files = fileRuta.listFiles()
-
-        for (file in files) {
-
-            if (file.isFile)
-            {
-
-                val selectedImage = Uri.fromFile(file)
-                val fileExtension: String = MimeTypeMap.getFileExtensionFromUrl(selectedImage.toString())
-                val mimeTypeMap = MimeTypeMap.getSingleton().getExtensionFromMimeType(fileExtension)
-
-                listPhoto.add(GalleryPhoto(file.name, fileExtension, selectedImage.authority, file.freeSpace.toDouble(), 0.0, 0, 0, 0,file.path))
-
-            }
-
-            /*var exifInterface = ExifInterface(file.inputStream())
+        Log.e("Log", activity.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).toString() + "/DCIM/Camera/" )
 
 
+        var fileRutaPhoto = File(activity.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).toString())
 
-            file.canonicalFile.canonicalFile.
-            file.bufferedReader(Charset.defaultCharset(), DEFAULT_BUFFER_SIZE).
-            file.canonicalFile.nameWithoutExtension
-            println("Extension " + file.extension)
-            file.isFile*/
+        val files = fileRutaPhoto.listFiles()
 
+
+        var filedocuments = ReadBitPhoto.listMobistegoItem(activity)
+
+        for (MobiStegoItem in filedocuments) {
+
+            val parts = MobiStegoItem.message.split(",")
+
+            listPhoto.add(GalleryPhoto(MobiStegoItem.bitmapCompressed, parts[0], parts[1], parts[2], parts[3].toDouble(), parts[4].toDouble(), parts[5].toLong(), parts[6].toInt(), parts[7].toInt()))
         }
+
+
+
+//        for (file in files) {
+//
+//            if (file.isFile)
+//            {
+//
+//                val myBitmap = BitmapFactory.decodeFile(file.absolutePath)
+//
+//                //myBitmap.
+//
+//
+//                val selectedImage = Uri.fromFile(file)
+//                val fileExtension: String = MimeTypeMap.getFileExtensionFromUrl(selectedImage.toString())
+//                val mimeTypeMap = MimeTypeMap.getSingleton().getExtensionFromMimeType(fileExtension)
+//
+//                listPhoto.add(GalleryPhoto(file, file.name, fileExtension, selectedImage.authority, file.freeSpace.toDouble(), 0.0, 0, 0, 0,file.path))
+//
+//            }
+//
+//            /*var exifInterface = ExifInterface(file.inputStream())
+//
+//
+//
+//            file.canonicalFile.canonicalFile.
+//            file.bufferedReader(Charset.defaultCharset(), DEFAULT_BUFFER_SIZE).
+//            file.canonicalFile.nameWithoutExtension
+//            println("Extension " + file.extension)
+//            file.isFile*/
+//
+//        }
 
         rvGalleryPhoto.adapter = BaseAdapterPhoto(listPhoto, context)
 
