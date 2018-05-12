@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import sagarpa.planetmedia.com.sagarpapp.R
 
-class GalleryActivity : AppCompatActivity() {
+class GalleryActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

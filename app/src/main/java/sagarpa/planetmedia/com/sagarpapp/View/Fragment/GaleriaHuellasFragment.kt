@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import sagarpa.planetmedia.com.sagarpapp.R
 
-class GaleriaHuellasFragment : Fragment() {
+class GaleriaHuellasFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {

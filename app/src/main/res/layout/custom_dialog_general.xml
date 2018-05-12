@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="50dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/esquinas_redondeadas"
+        android:gravity="top|left"
+        android:orientation="vertical"
+        android:padding="@dimen/ocho_dp">
+
+        <LinearLayout
+            android:id="@+id/title_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/ocho_dp"
+            android:layout_marginTop="@dimen/treinta_y_dos_dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_title_dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/title_txt"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dieciseis_dp"
+            android:layout_marginTop="@dimen/dieciseis_dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/background_name_photo"
+            android:textSize="@dimen/subtitle_txt"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/btn_aceptar_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/cincuenta_dp"
+            android:layout_marginStart="@dimen/cincuenta_dp"
+            android:layout_marginTop="@dimen/dieciseis_dp"
+            android:layout_weight="1"
+            android:background="@drawable/boton_azul_redondo"
+            android:text="@string/txt_btn_aceptar"
+            android:textColor="@color/coblanco"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/btn_cancel_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/cincuenta_dp"
+            android:layout_marginStart="@dimen/cincuenta_dp"
+            android:layout_marginTop="@dimen/dieciseis_dp"
+            android:layout_weight="1"
+            android:background="@drawable/boton_redondo_blanco"
+            android:text="@string/txt_btn_cancelar"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/textViewCodigoError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dieciseis_dp"
+            android:layout_marginTop="@dimen/diez_dp"
+            android:layout_weight="1"
+            android:text="zxczxczx"
+            android:textAlignment="viewEnd" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

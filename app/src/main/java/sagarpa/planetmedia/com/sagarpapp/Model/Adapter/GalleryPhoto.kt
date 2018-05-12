@@ -11,7 +11,6 @@ data class GalleryPhoto(val filePhoto: File,
                         val sTimeImage: String = KeyDictionary.stringDefault,
                         val dLatitudImage: Double = KeyDictionary.doubleDefault,
                         val dLongitudImage: Double = KeyDictionary.doubleDefault,
-                        val iSizeImage: Int = KeyDictionary.intDefault,
+                        val iSizeImage: Long = KeyDictionary.longDefault,
                         val iWithImage: Int = KeyDictionary.intDefault,
-                        val iHeightImage: Int = KeyDictionary.intDefault,
-                        val sNameFolder: String = KeyDictionary.stringDefault) : Serializable
+                        val iHeightImage: Int = KeyDictionary.intDefault) : Serializable

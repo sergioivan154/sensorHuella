@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_huellas.*
 import sagarpa.planetmedia.com.sagarpapp.R
 
-class HuellasActivity: AppCompatActivity() {
+class HuellasActivity: BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

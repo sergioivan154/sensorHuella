@@ -6,7 +6,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_login.*
 import sagarpa.planetmedia.com.sagarpapp.R
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

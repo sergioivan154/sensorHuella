@@ -9,6 +9,10 @@ import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.item_photo.view.*
 import sagarpa.planetmedia.com.sagarpapp.R
 import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
+import android.graphics.BitmapFactory
+import android.graphics.Bitmap
+
+
 
 class BaseAdapterPhoto(var listDataPhoto: List<GalleryPhoto>, var contextMain: Context) : RecyclerView.Adapter<BaseAdapterPhoto.VHolder>() {
     override fun onBindViewHolder(holder: VHolder, position: Int) {
@@ -29,9 +33,21 @@ class BaseAdapterPhoto(var listDataPhoto: List<GalleryPhoto>, var contextMain: C
 
             with(itemView) {
 
-                if (galleryPhoto.sDateImage.equals("jpg"))
+                //if (galleryPhoto.sDateImage.equals("jpg"))
 
                 textViewNamePhoto.text = galleryPhoto.sNameImage
+
+                val myBitmap = BitmapFactory.decodeFile(galleryPhoto.filePhoto.absolutePath)
+
+                imageViewPhoto.setImageBitmap(myBitmap)
+
+                textViewDate.text = "Fecha:" + galleryPhoto.sDateImage
+                textViewTime.text = "Hora: " + galleryPhoto.sTimeImage
+                textViewLatitud.text = "Latitud: " +galleryPhoto.dLatitudImage.toString()
+                textViewLongitud.text = "Longitud: " + galleryPhoto.dLongitudImage.toString()
+                textViewSize.text = "Peso: " + galleryPhoto.iSizeImage.toString() + "KB"
+                textViewpixeles.text = "Medidas: " + galleryPhoto.iWithImage.toString() + "x" + galleryPhoto.iHeightImage.toString()
+
 
             }
 

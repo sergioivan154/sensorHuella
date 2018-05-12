@@ -271,5 +271,7 @@
     <string name="storage_permission_denied_message">Storage permission is required in order to take a photo with the camera</string>
 
     <string name="txt_default">Default text</string>
+    <string name="txt_geolocalizacion_menu_dialog">Geolocalización</string>
+    <string name="txt_geolocalizacion_menu_text_dialog">Para continuar, permite que tu dispositivo active tu ubicación</string>
 
 </resources>
