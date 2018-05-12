@@ -7,12 +7,18 @@
     android:orientation="vertical"
     tools:context=".View.Activity.LoginActivity">
 
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
         android:orientation="vertical">
+        <Button
+            android:id="@+id/btnSensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reconocer Lector"/>
 
         <ImageView
             android:layout_width="100dp"
@@ -102,14 +108,15 @@
 
         </RelativeLayout>
 
-        <TextView
+        <ImageView
+            android:paddingTop="10dp"
             android:id="@+id/fingerprint_status"
-            style="@android:style/TextAppearance.Material.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:text="@string/fingerprint_hint"
-            android:textColor="@color/hint_color" />
+            android:src="@drawable/check"
+            android:visibility="gone"
+            />
 
 
     </LinearLayout>
