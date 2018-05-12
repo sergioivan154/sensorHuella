@@ -13,6 +13,7 @@ import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.BaseAdapterHuellas
 import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.Huella
 import sagarpa.planetmedia.com.sagarpapp.R
 import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript
+import sagarpa.planetmedia.com.sagarpapp.Utility.ConexionSQLiteHelper
 import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
 
 class GaleriaHuellasFragment : Fragment() {
@@ -23,15 +24,12 @@ class GaleriaHuellasFragment : Fragment() {
         // Inflate the layout for this fragment
 
         var view = inflater.inflate(R.layout.fragment_galeria_huellas, container, false)
+        val con = ConexionSQLiteHelper(context, "sqLiteDatabase_user", null, 1)
 
 
         //aqui se deben de listar todas las huellas registradas en el telefono
 
-        var huella = Huella(
-                AppUtilidadesEncript().Desencriptar(SagarpaPreferences(activity).getNombreSaved()),
-                AppUtilidadesEncript().Desencriptar(SagarpaPreferences(activity).getCorreoSaved()))
-        var lHuellas = ArrayList<Huella>()
-        lHuellas.add(huella)
+        val lHuellas = con.selectHuellas()
 
         var adapter = BaseAdapterHuellas(lHuellas, context)
 

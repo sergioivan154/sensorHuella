@@ -9,6 +9,7 @@ import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.item_huella.view.*
 import kotlinx.android.synthetic.main.item_photo.view.*
 import sagarpa.planetmedia.com.sagarpapp.R
+import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript
 import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
 import sagarpa.planetmedia.com.sagarpapp.View.Dialog.DialogoHuella
 
@@ -31,9 +32,12 @@ class BaseAdapterHuellas(var listDataPhoto: List<Huella>, var contextMain: Conte
 
             with(itemView) {
 
-                itemView.textNombre.text = huella.nombre
-                itemView.textEmail.text = huella.correo
+                itemView.textNombre.text = AppUtilidadesEncript().Desencriptar(huella.nombre)
+                itemView.textEmail.text = AppUtilidadesEncript().Desencriptar(huella.correo)
+                itemView.imageView_Huella.setImageBitmap(huella.huella)
                 itemView.setOnClickListener { DialogoHuella(context).show() }
+
+
             }
 
         }

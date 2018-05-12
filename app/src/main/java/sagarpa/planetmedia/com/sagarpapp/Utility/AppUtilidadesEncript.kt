@@ -62,4 +62,7 @@ class AppUtilidadesEncript {
 
         return base64EncryptedString
     }
+
+
+
 }

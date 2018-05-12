@@ -5,5 +5,6 @@ object Memoria {
     var nombre:String = ""
     var pass:String = ""
     var email:String = ""
+    var huella:String = ""
 
 }
