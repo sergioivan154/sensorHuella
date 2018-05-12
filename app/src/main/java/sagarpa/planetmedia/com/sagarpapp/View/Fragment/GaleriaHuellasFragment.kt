@@ -1,6 +1,5 @@
 package sagarpa.planetmedia.com.sagarpapp.View.Fragment
 
-import android.app.Fragment
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
@@ -9,8 +8,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_galeria_huellas.view.*
 import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.BaseAdapterHuellas
 import sagarpa.planetmedia.com.sagarpapp.R
-import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript
-import sagarpa.planetmedia.com.sagarpapp.Utility.ConexionSQLiteHelper
+import sagarpa.planetmedia.com.sagarpapp.Model.Base.ConexionSQLiteHelper
 import sagarpa.planetmedia.com.sagarpapp.Utility.KeyDictionary
 
 class GaleriaHuellasFragment : BaseFragment() {

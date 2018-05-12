@@ -2,13 +2,15 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/photo_height">
+    android:layout_height="300dp">
+
 
     <ImageView
         android:id="@+id/imageViewPhoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="center"
+        android:background="@color/background_name_photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +26,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textViewNamePhoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -31,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
+            android:textColor="@color/wallet_bright_foreground_holo_dark"
             android:textAlignment="viewEnd" />
 
         <TextView
@@ -38,12 +42,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
+            android:textColor="@color/wallet_bright_foreground_holo_dark"
             android:textAlignment="viewEnd" />
 
         <TextView
             android:id="@+id/textViewLatitud"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/wallet_bright_foreground_holo_dark"
             android:text="TextView"
             android:textAlignment="viewEnd" />
 
@@ -51,6 +57,7 @@
             android:id="@+id/textViewLongitud"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/wallet_bright_foreground_holo_dark"
             android:text="TextView"
             android:textAlignment="viewEnd" />
 
@@ -59,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:textColor="@color/wallet_bright_foreground_holo_dark"
             android:text="TextView"
             android:textAlignment="viewEnd"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -66,6 +74,7 @@
         <TextView
             android:id="@+id/textViewpixeles"
             android:layout_width="match_parent"
+            android:textColor="@color/wallet_bright_foreground_holo_dark"
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textAlignment="viewEnd" />

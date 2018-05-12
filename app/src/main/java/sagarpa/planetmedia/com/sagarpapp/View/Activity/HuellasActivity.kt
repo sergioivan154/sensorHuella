@@ -1,6 +1,5 @@
 package sagarpa.planetmedia.com.sagarpapp.View.Activity
 
-import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -15,7 +14,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_huellas.*
 import sagarpa.planetmedia.com.sagarpapp.R
 import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript
-import sagarpa.planetmedia.com.sagarpapp.Utility.ConexionSQLiteHelper
+import sagarpa.planetmedia.com.sagarpapp.Model.Base.ConexionSQLiteHelper
 import sagarpa.planetmedia.com.sagarpapp.Utility.Memoria
 import sagarpa.planetmedia.com.sagarpapp.Utility.Utilities
 

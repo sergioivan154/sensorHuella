@@ -1,4 +1,4 @@
-package sagarpa.planetmedia.com.sagarpapp.Utility;
+package sagarpa.planetmedia.com.sagarpapp.Model.Base;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -13,13 +13,15 @@ import java.util.List;
 
 import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.Huella;
 import sagarpa.planetmedia.com.sagarpapp.Model.Entity.User;
+import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript;
+import sagarpa.planetmedia.com.sagarpapp.Utility.Utilities;
 
 
 public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
 
     public ConexionSQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory) {
-        super(context, name, factory, 3);
+        super(context, name, factory, 4);
     }
 
     @Override

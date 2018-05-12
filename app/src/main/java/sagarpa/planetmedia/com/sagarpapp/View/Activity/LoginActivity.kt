@@ -1,15 +1,12 @@
 package sagarpa.planetmedia.com.sagarpapp.View.Activity
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.Message
-import android.util.Base64
 import android.view.View
 import android.widget.Toast
 import asia.kanopi.fingerscan.Fingerprint
@@ -21,9 +18,7 @@ import sagarpa.planetmedia.com.sagarpapp.Model.Adapter.Huella
 import sagarpa.planetmedia.com.sagarpapp.R
 import sagarpa.planetmedia.com.sagarpapp.Utility.AppUtilidadesEncript
 import sagarpa.planetmedia.com.sagarpapp.Utility.Biometrico.Biometrico
-import sagarpa.planetmedia.com.sagarpapp.Utility.Biometrico.BiometricoResponse
-import sagarpa.planetmedia.com.sagarpapp.Utility.ConexionSQLiteHelper
-import sagarpa.planetmedia.com.sagarpapp.Utility.Memoria
+import sagarpa.planetmedia.com.sagarpapp.Model.Base.ConexionSQLiteHelper
 
 class LoginActivity : BaseActivity() {
 
